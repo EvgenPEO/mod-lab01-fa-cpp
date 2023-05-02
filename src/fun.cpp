@@ -12,8 +12,7 @@ unsigned int faStr1(const char *str) {
             if (isdigit(str[i])) {
                 containsDigit = true;
             }
-        }
-        else {
+        } else {
             if (isWord && !containsDigit) {
                 count++;
             }
@@ -37,13 +36,11 @@ unsigned int faStr2(const char *str) {
         if (!isspace(str[i])) {
             if (!isWord && isupper(str[i])) {
                 isValidWord = true;
-            }
-            else if (!islower(str[i])) {
+            } else if (!islower(str[i])) {
                 isValidWord = false;
             }
             isWord = true;
-        }
-        else {
+        } else {
             if (isWord && isValidWord) {
                 count++;
             }
@@ -69,8 +66,7 @@ unsigned int faStr3(const char *str) {
         if (!isspace(str[i])) {
             isWord = true;
             currentWordLength++;
-        }
-        else {
+        } else {
             if (isWord) {
                 wordCount++;
                 totalLength += currentWordLength;
